@@ -36,7 +36,7 @@ app.get("/favthings", (req, resp) => {
 // http://expressjs.com/en/api.html#req.body
 app.post("/favthings", (req, resp) => {
   favthings.push(req.query.favthing)
-  mailself('c8ln: new favorite thing', req.query.favthing)
+  mailself('RSVP', req.query.favthing)
   resp.sendStatus(200)
 })
 
