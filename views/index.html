@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RSVP App</title>
+    <meta name="description" content="TODO">
+    <link id="favicon" rel="icon" href="https://glitch.com/favicon.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        RSVP App
+      </h1>
+    </header>
+
+    <main>
+      <p>
+        The idea here is to give a simple multiple choice question for how likely you are to
+        attend a thing.
+        Each option should be understandable to normal people but also include a range of 
+        probabilities. For example:
+      </p>
+      <p>
+      <pre>
+(a) I'm definitely coming! (&gt;90% chance)
+(b) I'm probably coming (&gt;50% chance)
+(c) I'm unlikely this time but want to stay in the loop (&lt;50% chance)
+      </pre>        
+      </p>
+      <p>
+      And there should be an "other" option that makes you enter a specific probability.
+      Nerds can use that if they want something in between the given options (like ")
+      </p>
+      <form>
+        <input type="text" maxlength="100" placeholder="I'm maybe coming!">
+        <button type="submit">Submit</button>
+      </form>
+      <section class="favthings">
+        <ul id="favthings"></ul>
+      </section>
+    </main>
+
+    <footer>
+    </footer>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+
+  </body>
+</html>
