@@ -11,7 +11,7 @@ $(function() {
   
   $.get('/favthings', function(favthings) {
     favthings.forEach(function(favthing) {
-      $('<li></li>').text(favthing).appendTo('ul#favthings');
+      $('<li></li>').text(favthing).appendTo('ol#favthings');
     });
   });
 
@@ -19,7 +19,7 @@ $(function() {
     event.preventDefault();
     var favthing = $('input').val();
     $.post('/favthings?' + $.param({favthing: favthing}), function() {
-      $('<li></li>').text(favthing).appendTo('ul#favthings');
+      $('<li></li>').text(favthing).appendTo('ol#favthings');
       $('input').val('');
       $('input').focus();
     });
