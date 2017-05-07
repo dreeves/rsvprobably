@@ -41,6 +41,22 @@ app.post("/favthings", (req, resp) => {
 })
 
 var favthings = [
+"danny is hosting and definitely will be there",
+"bee is schlepping kids around and won't be",
+"echo is probable",
+"sam is definite",
+"eric is unlikely",
+"isaac is 90%",
+"jeff is probable",
+"jennifer is out of town",
+"kelley is very probable",
+"matthew is unlikely",
+"andrew is likely-ish",
+"noah is very likely",
+"dennis & fionna are maybes",
+"hugh is very likely",
+"joe is definite",
+"john is probable",
 ]
 
 var listener = app.listen(process.env.PORT, () => {
