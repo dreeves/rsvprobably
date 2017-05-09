@@ -43,14 +43,14 @@ var listener = app.listen(process.env.PORT, () => {
 var rsvps = [
   "Danny is definitely coming (a)",
   "Bee will be there with beels on (a)",
-  "Caitlin will be there around 8pm (a)",
+  "Caitlin is now unlikely (d)",
   "Echo = B+ (80%)",
   "Matthew = B! (>50%)",
   "Lillian = D, cuz 7pm is real late for her!",
   "Ian = D cuz he's in Seattle",
 ]
 /*
-{1,1}+{.9,1}+{.9,1}*(4/5*0+1)+{.8,.8}+{.5,.9}+{0,.1}+{0,.1}
+{1,1}+{.9,1}+{0,.1}*(4/5*0+1)+{.8,.8}+{.5,.9}+{0,.1}+{0,.1}
 (* Fractional attendance given arrival time, assuming the event 12:30-15:00 *)
 f[h_, m_] := Clip[(15 + 0/60 - h - m/60)/(15 + 0/60 - 12 - 30/60), {0, 1}]
 */
