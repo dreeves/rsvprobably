@@ -41,7 +41,6 @@ var listener = app.listen(process.env.PORT, () => {
 })
 
 var rsvps = [
-  "test1",
 ]
 
 /* Case studies:
