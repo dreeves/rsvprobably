@@ -9,17 +9,17 @@
 $(function() {
   console.log('hello world :o');
   
-  $.get('/favthings', function(favthings) {
-    favthings.forEach(function(favthing) {
-      $('<li></li>').text(favthing).appendTo('ol#favthings');
+  $.get('/rsvps', function(rsvps) {
+    rsvps.forEach(function(rsvp) {
+      $('<li></li>').text(rsvp).appendTo('ol#rsvps');
     });
   });
 
   $('form').submit(function(event) {
     event.preventDefault();
-    var favthing = $('input').val();
-    $.post('/favthings?' + $.param({favthing: favthing}), function() {
-      $('<li></li>').text(favthing).appendTo('ol#favthings');
+    var rsvp = $('input').val();
+    $.post('/rsvps?' + $.param({rsvp: rsvp}), function() {
+      $('<li></li>').text(rsvp).appendTo('ol#rsvps');
       $('input').val('');
       $('input').focus();
     });

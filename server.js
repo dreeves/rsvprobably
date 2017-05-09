@@ -22,21 +22,17 @@ function mailself(subj, body) {
   })
 }
 
-app.use(express.static('public'))
+app.use(express.static('pub'))
 
-app.get("/", (req, resp) => {
-  resp.sendFile(__dirname + '/views/index.html')
-})
-
-app.get("/favthings", (req, resp) => {
-  resp.send(favthings)
+app.get("/rsvps", (req, resp) => {
+  resp.send(rsvps)
 })
 
 // could also use the POST body instead of query string: 
 // http://expressjs.com/en/api.html#req.body
-app.post("/favthings", (req, resp) => {
-  favthings.push(req.query.favthing)
-  mailself('RSVP', req.query.favthing)
+app.post("/rsvps", (req, resp) => {
+  rsvps.push(req.query.rsvp)
+  mailself('RSVP', req.query.rsvp)
   resp.sendStatus(200)
 })
 
@@ -44,7 +40,9 @@ var listener = app.listen(process.env.PORT, () => {
   console.log('RSVP app is running on port ' + listener.address().port)
 })
 
-var favthings = []
+var rsvps = [
+  "test1",
+]
 
 /* Case studies:
 SSC meetup on 2017-05-07:
