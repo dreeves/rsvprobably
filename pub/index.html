@@ -28,15 +28,19 @@ probabilities. For example:
 (d) Sad trombone &mdash; I probably can't come! (&lt;10% chance)
 </pre>        
 <p>
-And there should be an "other" option that makes you enter a specific probability.
+And there could be an "other" option that makes you enter a specific probability.
 Nerds can use that if they want something in between the given options &mdash;
 like "quite likely" which might be, say, 80%.
 And non-nerds can use it to say things like "definitely can't make it", ie, 0%, or 
 "wouldn't miss it for the world", ie, 100%.
 </p>
 <p>
+(Or maybe it's better to minimize the cognitive load by only allowing a fixed handful of 
+choices. Roughly: yes, probably, probably not, and no.)  
+</p>
+<p>
 Anyway, you end up with a list of people each with min and max probabilties.
-(The people who picked "other" will have min=max, which is fine.)
+(Anyone who picked "other" will have min=max, which is fine.)
 So then you can get a range on the expected number of people who will show up.
 Just add up the min probabilities for the lower bound and add up the max probabilities for
 the upper bound.
