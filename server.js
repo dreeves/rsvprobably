@@ -52,20 +52,20 @@ RSVPs predicted 9.05 to 12.7 people.
 Actual was 13 people at the peak but one person arrived not too much before the first 
 person left. If we count everyone's attendance fractionally then the total attendance
 was 10.3 people.
-["danny is hosting and definitely will be there",
-"bee is schlepping kids around and won't be",
-"echo is probable",
-"sam is definite",
-"eric is unlikely",
-"isaac is 90%",
-"jeff is probable",
-"jennifer is out of town",
-"kelley is very probable",
-"matthew is unlikely",
-"andrew is likely-ish",
-"noah is very likely",
-"dennis & fionna are maybes",
-"hugh is very likely",
-"joe is definite",
-"john is probable",]
+["danny is hosting and definitely will be there", // 1
+"bee is schlepping kids around and won't be", // 0
+"echo is probable", // 12:46
+"sam is definite", // 12:34
+"eric is unlikely", // cookies? lawyer?
+"isaac is 90%", // 1
+"jeff is probable", // 13:28
+"jennifer is out of town", // 0
+"kelley is very probable", // 0
+"matthew is unlikely", // 0
+"andrew is likely-ish", // 0
+"noah is very likely", // 1
+"dennis & fionna are maybes", // 2
+"hugh is very likely", // cookies? lawyer?
+"joe is definite", // 12:43
+"john is probable",] // 12:49
 */
