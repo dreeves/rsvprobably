@@ -40,6 +40,10 @@ app.post("/favthings", (req, resp) => {
   resp.sendStatus(200)
 })
 
+var listener = app.listen(process.env.PORT, () => {
+  console.log('RSVP app is running on port ' + listener.address().port)
+})
+
 var favthings = [
 "danny is hosting and definitely will be there",
 "bee is schlepping kids around and won't be",
@@ -59,6 +63,10 @@ var favthings = [
 "john is probable",
 ]
 
-var listener = app.listen(process.env.PORT, () => {
-  console.log('RSVP app is running on port ' + listener.address().port)
-})
+/* Case studies:
+SSC meetup on 2017-05-07:
+RSVPs predicted 9.05 to 12.7 people.
+Actual was 13 people at the peak but one person arrived not too much before the first 
+person left. If we count everyone's attendance fractionally then the total attendance
+was 10.3 people.
+*/
