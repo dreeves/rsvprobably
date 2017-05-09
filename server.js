@@ -44,6 +44,7 @@ var rsvps = [
   "Danny is definitely coming (a)",
   "Bee will be there with beels on (a)",
   "Caitlin will be there around 8pm (a)",
+  "Echo = B+ (80%)",
 ]
 
 /*
