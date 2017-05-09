@@ -41,6 +41,8 @@ var listener = app.listen(process.env.PORT, () => {
 })
 
 var rsvps = [
+  "Danny is definitely coming",
+  "Bee will be there with beels on",
 ]
 
 /* Case studies:
