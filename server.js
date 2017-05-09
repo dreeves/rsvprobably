@@ -43,10 +43,12 @@ var listener = app.listen(process.env.PORT, () => {
 var rsvps = [
   "Danny is definitely coming (a)",
   "Bee will be there with beels on (a)",
+  "Caitlin will be there around 8pm (a)",
 ]
 
 /*
   "Caitlin aiming for arrival for 8'o'clock tock (a)",
+  
 */
 
 /* Case studies:
