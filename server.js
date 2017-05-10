@@ -41,22 +41,16 @@ var listener = app.listen(process.env.PORT, () => {
 })
 
 var rsvps = [
-  "Danny is definitely coming (a)",
-  "Bee will be there with beels on (a)",
-  "Caitlin is now unlikely (d)",
-  "Echo = B+ (80%)",
-  "Matthew = B! (>50%)",
-  "Lillian = D, cuz 7pm is real late for her!",
-  "Ian = D cuz he's in Seattle",
 ]
 /*
-{1,1}+{.9,1}+{0,.1}*(4/5*0+1)+{.8,.8}+{.5,.9}+{0,.1}+{0,.1}
-(* Fractional attendance given arrival time, assuming the event 12:30-15:00 *)
-f[h_, m_] := Clip[(15 + 0/60 - h - m/60)/(15 + 0/60 - 12 - 30/60), {0, 1}]
+{1,1}+{.9,1}+{0,.1}*(4/5*0+1)+{.8,.8}+{.5,.9}+{0,0}+{0,0}
+(* Fractional attendance given arrival time, assuming a 12:30-15:00 event *)
+f[h_, m_] := Clip[((15+0/60) - (h+m/60)) /
+                  ((15+0/60) - (12-30/60)), {0, 1}]
 */
 
 /* Case studies:
-["danny is hosting and definitely will be there", // 1
+"danny is hosting and definitely will be there", // 1
 "bee is schlepping kids around and won't be", // 0
 "echo is probable", // 12:46
 "sam is definite", // 12:34
@@ -71,5 +65,14 @@ f[h_, m_] := Clip[(15 + 0/60 - h - m/60)/(15 + 0/60 - 12 - 30/60), {0, 1}]
 "dennis & fionna are maybes", // 2
 "hugh is very likely", // cookies? lawyer?
 "joe is definite", // 12:43
-"john is probable",] // 12:49
+"john is probable", // 12:49
+
+"Danny is definitely coming (a)", // 1
+"Bee will be there with beels on (a)", // 1
+"Caitlin is now unlikely (d)", // 0
+"Echo = B+ (80%)", // 1
+"Matthew = B! (>50%)", // 0
+"Lillian = no, cuz 7pm is real late for her!", // 0
+"Ian = no, cuz he's in Seattle", // 0
+
 */
