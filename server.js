@@ -41,6 +41,9 @@ var listener = app.listen(process.env.PORT, () => {
 })
 
 var rsvps = [
+  "Danny = a",
+  "One mystery person is quite likely coming! (>80% chance)",
+  "Kelley = b",
 ]
 /*
 {1,1}+{.9,1}+{0,.1}*(4/5*0+1)+{.8,.8}+{.5,.9}+{0,0}+{0,0}
