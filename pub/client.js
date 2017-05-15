@@ -13,10 +13,8 @@ $(function() {
     })
   });
   
-  $.get('/min', function(x) {
-    d = document.getElementById('mincount');
-    
-  });
+  $.get('/min', function(x) { document.getElementById('mincount').innerHTML = x });
+  $.get('/max', function(x) { document.getElementById('maxcount').innerHTML = x });
 
   $('form').submit(function(event) {
     event.preventDefault();
