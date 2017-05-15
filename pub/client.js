@@ -6,9 +6,7 @@
 // by default, you've got jQuery,
 // add other scripts at the bottom of index.html
 
-$(function() {
-  console.log('hello world :o');
-  
+$(function() {  
   $.get('/rsvps', function(rsvps) {
     rsvps.forEach(function(rsvp) {
       $('<li></li>').text(rsvp).appendTo('ol#rsvps');
