@@ -25,7 +25,7 @@ function mailself(subj, body) {
 app.use(express.static('pub'))
 
 app.get("/rsvps", (req, resp) => {
-  resp.send(rsvps)
+  resp.send(rsvps.map())
 })
 
 // could also use the POST body instead of query string: 
@@ -41,14 +41,15 @@ var listener = app.listen(process.env.PORT, () => {
 })
 
 var rsvps = [
-  "Danny = a",
-  "Sam is quite likely coming! (>80% chance)",
-  "Kelley = b",
-  "1% chance i (John swanson) will make it as we have a trip to Alaska planned",
-  "Noah is coming. >80%",
-  "A mystery person will probably be there unless something horrible happens. Will be leaving a bit early, though.",
-  "Echo is maybe probably coming (60%)",
+  ["Danny = a"],
+  ["Sam is quite likely coming! (>80% chance)"],
+  ["Kelley = b"],
+  ["1% chance i (John swanson) will make it as we have a trip to Alaska planned"],
+  ["Noah is coming. >80%"],
+  ["A mystery person will probably be there unless something horrible happens. Will be leaving a bit early, though."],
+  ["Echo is maybe probably coming (60%)"],
 ]
+
 /*
 {1,1}+{.9,1}+{0,.1}*(4/5*0+1)+{.8,.8}+{.5,.9}+{0,0}+{0,0}
 (* Fractional attendance given arrival time, assuming a 12:30-15:00 event *)
