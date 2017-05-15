@@ -44,6 +44,10 @@ var rsvps = [
   "Danny = a",
   "Sam is quite likely coming! (>80% chance)",
   "Kelley = b",
+  "1% chance i (John swanson) will make it as we have a trip to Alaska planned",
+  "Noah is coming. >80%",
+  "A mystery person will probably be there unless something horrible happens. Will be leaving a bit early, though.",
+  "Echo is maybe probably coming (60%)",
 ]
 /*
 {1,1}+{.9,1}+{0,.1}*(4/5*0+1)+{.8,.8}+{.5,.9}+{0,0}+{0,0}
