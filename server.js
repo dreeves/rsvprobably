@@ -22,12 +22,16 @@ function mailself(subj, body) {
   })
 }
 
+function shn(x) {
+  return Math.round(10*x)/10
+}
+
 app.use(express.static('pub'))
 
 app.get("/rsvps", (req, resp) => { resp.send(rsvps.map(l => l[0])) })
 
-app.get("/min", (req, resp) => { resp.send(rsvps.reduce((acc, x) => acc + x[1], 0)) })
-app.get("/max", (req, resp) => { resp.send(rsvps.reduce((acc, x) => acc + x[2], 0)) })
+app.get("/min", (req, resp) => { resp.send(shn(rsvps.reduce((acc,x) => acc+x[1], 0))) })
+app.get("/max", (req, resp) => { resp.send(shn(rsvps.reduce((acc,x) => acc+x[2], 0))) })
 
 // could also use the POST body instead of query string: 
 // http://expressjs.com/en/api.html#req.body
