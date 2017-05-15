@@ -9,8 +9,13 @@
 $(function() {  
   $.get('/rsvps', function(rsvps) {
     rsvps.forEach(function(rsvp) {
-      $('<li></li>').text(rsvp).appendTo('ol#rsvps');
-    });
+      $('<li></li>').text(rsvp).appendTo('ol#rsvps')
+    })
+  });
+  
+  $.get('/min', function(x) {
+    d = document.getElementById('mincount');
+    
   });
 
   $('form').submit(function(event) {
@@ -19,8 +24,8 @@ $(function() {
     $.post('/rsvps?' + $.param({rsvp: rsvp}), function() {
       $('<li></li>').text(rsvp).appendTo('ol#rsvps');
       $('input').val('');
-      $('input').focus();
-    });
-  });
+      $('input').focus()
+    })
+  })
 
-});
+})
