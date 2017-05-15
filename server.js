@@ -25,9 +25,14 @@ function mailself(subj, body) {
 app.use(express.static('pub'))
 
 app.get("/rsvps", (req, resp) => {
-  resp.send(rsvps.map())
+  resp.send(rsvps.map(l => l[0]))
 })
 
+app.get("/min", (req, resp) => {
+  resp.send(rsvps.reduce(rsvps.map((acc, val) => acc + val[1]), 0))
+})
+
+app
 // could also use the POST body instead of query string: 
 // http://expressjs.com/en/api.html#req.body
 app.post("/rsvps", (req, resp) => {
@@ -41,13 +46,13 @@ var listener = app.listen(process.env.PORT, () => {
 })
 
 var rsvps = [
-  ["Danny = a"],
-  ["Sam is quite likely coming! (>80% chance)"],
-  ["Kelley = b"],
-  ["1% chance i (John swanson) will make it as we have a trip to Alaska planned"],
-  ["Noah is coming. >80%"],
-  ["A mystery person will probably be there unless something horrible happens. Will be leaving a bit early, though."],
-  ["Echo is maybe probably coming (60%)"],
+  ["Danny = a", 1, 1],
+  ["Sam is quite likely coming! (>80% chance)", .8, .9],
+  ["Kelley = b", .5, .9],
+  ["1% chance i (John swanson) will make it as we have a trip to Alaska planned", .01, .01],
+  ["Noah is coming. >80%", .8, .9],
+  ["A mystery person will probably be there unless something horrible happens. Will be leaving a bit early, though.", .5, .9],
+  ["Echo is maybe probably coming (60%)", .6, .6],
 ]
 
 /*
