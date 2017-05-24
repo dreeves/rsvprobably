@@ -53,6 +53,7 @@ var rsvps = [
   ["Noah is coming. >80%", .8, .9],
   ["A mystery person will probably be there unless something horrible happens. Will be leaving a bit early, though.", .5, .9],
   ["Echo is maybe probably coming (60%)", .6, .6],
+  ["(a) for Curtis", .9, 1],
 ]
 
 /*
