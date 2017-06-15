@@ -46,15 +46,7 @@ var listener = app.listen(process.env.PORT, () => {
 })
 
 var rsvps = [
-  ["Danny = a", 1, 1],
-  ["Sam is quite likely coming! (>80% chance)", .8, .9],
-  ["Kelley = b", .5, .9],
-  ["1% chance i (John swanson) will make it as we have a trip to Alaska planned", .01, .01],
-  ["Noah is coming. >80%", .8, .9],
-  ["A mystery person will probably be there unless something horrible happens. Will be leaving a bit early, though.", .5, .9],
-  ["Echo is maybe probably coming (60%)", .6, .6],
-  ["(a) for Curtis", .9, 1],
-  ["Isaac: 90%", .9, .9],
+  ["Mystery person says (b)", .5, .9],
 ]
 
 /*
@@ -89,5 +81,16 @@ f[h_, m_] := Clip[((15+0/60) - (h+m/60)) /
 "Matthew = B! (>50%)", // 0
 "Lillian = no, cuz 7pm is real late for her!", // 0
 "Ian = no, cuz he's in Seattle", // 0
+
+2017 June 10 SSC meetup:
+  ["Danny = a", 1, 1],
+  ["Sam is quite likely coming! (>80% chance)", .8, .9],
+  ["Kelley = b", .5, .9],
+  ["1% chance i (John swanson) will make it as we have a trip to Alaska planned", .01, .01],
+  ["Noah is coming. >80%", .8, .9],
+  ["A mystery person will probably be there unless something horrible happens. Will be leaving a bit early, though.", .5, .9],
+  ["Echo is maybe probably coming (60%)", .6, .6],
+  ["(a) for Curtis", .9, 1],
+  ["Isaac: 90%", .9, .9],
 
 */
