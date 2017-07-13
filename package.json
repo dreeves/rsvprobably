@@ -15,7 +15,7 @@
 	"mailgun-js": "0.10.1"
 },
 "engines": {
-	"node": "6.x"
+	"node": "8.x"
 },
 "keywords": [
 	"node",
