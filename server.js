@@ -47,7 +47,8 @@ var listener = app.listen(process.env.PORT, () => {
 
 var rsvps = [
   ["Curtis (b)", .5, .9],
-  ["Echo 65%", .65, .65],
+  ["Echo (65%)", .65, .65],
+  ["Jennifer (d)", 0, .1],
 ]
 
 /*
