@@ -1,28 +1,26 @@
 {
-
-"//1": "describes your app and its dependencies",
-"//2": "https://docs.npmjs.com/files/package.json",
-"//3": "updating this file will download and update your packages",
-"name": "rsvp",
-"version": "0.0.1",
-"description": "Collect RSVPs",
-"main": "server.js",
-"scripts": {
-	"start": "node server.js"
-},
-"dependencies": {
-	"express": "^5.0.0-alpha.2",
-	"mailgun-js": "0.10.1"
-},
-"engines": {
-	"node": "8.x"
-},
-"keywords": [
-	"node",
-	"hyperdev",
-	"express"
-],
-"repository": "glitch/rsvp",
-"license": "MIT"
-
-} 
+	"//1": "describes your app and its dependencies",
+	"//2": "https://docs.npmjs.com/files/package.json",
+	"//3": "updating this file will download and update your packages",
+	"name": "rsvp",
+	"version": "0.0.1",
+	"description": "Collect RSVPs",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"express": "^5.0.0-alpha.2",
+		"mailgun-js": "0.10.1"
+	},
+	"engines": {
+		"node": "8.x"
+	},
+	"keywords": [
+		"node",
+		"hyperdev",
+		"express"
+	],
+	"repository": "glitch/rsvp",
+	"license": "MIT"
+}
