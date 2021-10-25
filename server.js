@@ -6,7 +6,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 function mailself(subj, body) {
   sgMail.send({
-    to: 'dreev.es@gmail.com',
+    to: process.env.MY_EMAIL,
     from: 'bot@dreev.es',
     subject: subj,
     text: body,
