@@ -1,24 +1,21 @@
-var express = require('express')
-var app = express()
-var Mailgun = require('mailgun-js')
+const express = require('express')
+const app = express()
+const sgMail = require('@sendgrid/mail')
+
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 function mailself(subj, body) {
-  var mailgun = new Mailgun({apiKey: process.env.MAILGUN_KEY, 
-                             domain: process.env.MAILGUN_DOMAIN})
-  var data = {
-    from:    process.env.MAILGUN_FROM,
-    to:      process.env.MY_EMAIL,
+  sgMail.send({
+    to: 'dreev.es@gmail.com',
+    from: 'bot@dreev.es',
     subject: subj,
-    text:    body,
-  }
-  mailgun.messages().send(data, (err, body) => {
-    //console.log("sent: " + JSON.stringify(body))
-    //if (err) {
-    //  response.render('error', { error: err })
-    //  console.log("error1422: ", err)
-    //} else {
-    //  console.log("sent: " + body)
-    //}
+    text: body,
+    //html: 'optional <i>html</i> version',    
+  }).then(() => {
+    console.log(`Email sent w/ subject: ${subj}`)
+  })
+  .catch((error) => {
+    console.error(error)
   })
 }
 
