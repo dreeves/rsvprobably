@@ -28,10 +28,8 @@ probabilities. For example:
 (d) Sad trombone &mdash; I probably can't come! (&lt;10% chance)
 </pre>        
 <p>
-And there could be an "other" option that makes you enter a specific probability.
-Nerds can use that if they want something in between the given options &mdash;
-like "quite likely" which might be, say, 80%.
-And non-nerds could use it to say things like "definitely can't make it", ie, 0%, or 
+Or nerds can give an explicit probability if they want.
+Or non-nerds can use it to say things like "definitely can't make it", ie, 0%, or 
 "wouldn't miss it for the world", ie, 100%.
 Or 50% for "right on the fence".
 </p>
@@ -41,18 +39,13 @@ choices. Roughly: yes, probably, probably not, and no.)
 </p>
 <p>
 Anyway, you end up with a list of people each with min and max probabilties.
-(Anyone who picked "other" will have min=max, which is fine.)
+(If you gave an explicit probability then min=max.)
 So then you can get a range on the expected number of people who will show up.
 Just add up the min probabilities for the lower bound and add up the max probabilities for
 the upper bound.
 </p>
 <p>
-That's not actually implemented yet so you can just type anything you want below but go
-ahead and use it for a genuine RSVP for the August SSC meetup.
-[UPDATE: I'm not maintaining this at the moment. Don't actually RSVP here now!]
-Or if you think it would be fun to help build this thing in 
-<a href="http://glitch.com" title="Glitch is the bees' knees">Glitch</a>,
-which is super fun btw, go ahead and say so here:
+That's not actually implemented yet so you can just type anything you want below.
 </p>
 <form>
   <input type="text" maxlength="100" placeholder="I'm probably maybe coming ish!">
@@ -63,7 +56,7 @@ which is super fun btw, go ahead and say so here:
 <ol id="rsvps"></ol>
 
 <h3>
-  Attendance estimate: <span id="mincount">0</span> &ndash; <span id="maxcount">0</span>
+Attendance estimate: <span id="mincount">n/a</span> &ndash; <span id="maxcount">n/a</span>
 </h3>
 
 <h3>Past case studies...</h3>
@@ -89,7 +82,7 @@ The algorithm predicted 3.2 to 3.8 people.
 arbitrary where to draw the line between altered predictions and realizations 
 of outcomes.
 Like if someone who was probable says an hour beforehand they're probably not 
-coming after all, that should probably count as a wrong prediction rather than 
+coming after all, that should probably (ha) count as a wrong prediction rather than 
 an updated prediction that turns out to be right when they don't in fact show 
 up.)
 Anyway, actual attendance was 3 people.
@@ -114,6 +107,8 @@ thing so instead you don't reply at all.
 Maybe it should have you first sign up as "interested", like subscribing for updates or 
 something. 
 Then there's a default response and you can pretend you never noticed you could change it.
+I don't know. 
+Humans, am I right?
 -->
 
 </main>

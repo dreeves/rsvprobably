@@ -1,17 +1,18 @@
 {
   "name": "rsvp",
-  "version": "0.0.2",
+  "version": "2025.05.27-a",
   "description": "Collect RSVPs",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "@sendgrid/mail": "^7.7.0"
+    "@sendgrid/mail": "^7.7.0",
+    "dotenv": "^16.5.0",
+    "express": "^4.18.2"
   },
   "engines": {
-    "node": "16"
+    "node": "18"
   },
   "keywords": [
     "evite"

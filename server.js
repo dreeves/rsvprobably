@@ -1,8 +1,11 @@
+require('dotenv').config()
+
 const express = require('express')
 const app = express()
 const sgMail = require('@sendgrid/mail')
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+//console.log(`DEBUG KEY = ${process.env.SENDGRID_API_KEY}\n`)
 
 function mailself(subj, body) {
   sgMail.send({
@@ -43,12 +46,12 @@ var listener = app.listen(process.env.PORT, () => {
 })
 
 var rsvps = [
-  ["Curtis (>50%)", .5, .9],
-  ["Echo (65%)", .65, .65],
-  ["Jennifer (<10%)", 0, .1],
-  ["Sam (75%)", .75, .75],
-  ["Isaac (>90%)", .9, 1],
-  ["Martin (1%)", .01, .01],
+//  ["Curtis (>50%)", .5, .9],
+//  ["Echo (65%)", .65, .65],
+//  ["Jennifer (<10%)", 0, .1],
+//  ["Sam (75%)", .75, .75],
+//  ["Isaac (>90%)", .9, 1],
+//  ["Martin (1%)", .01, .01],
 ]
 
 /*
